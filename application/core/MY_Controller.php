@@ -24,9 +24,8 @@ class Application extends CI_Controller {
          */
 	parent::__construct();
 	$this->data = array();
-        $this->choices = array(// our menu navbar
-            'Home' => '/', 'Gallery' => '/gallery', 'About' => '/about');
-	$this->data['pagetitle'] = 'Sample Image Gallery';
+	$this->data['pageTitle'] = 'So Glad';
+        $this->data['news']= "Load news story HTML here!";
     }
 
     /**
@@ -34,9 +33,7 @@ class Application extends CI_Controller {
      */
     function render()
     {
-	$this->data['menubar'] = build_menu_bar($this->choices);
 	$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
-	$this->data['data'] = &$this->data;// why do we do this?
 	$this->parser->parse('_template', $this->data);
     }
 

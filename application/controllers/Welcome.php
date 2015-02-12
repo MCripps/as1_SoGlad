@@ -56,30 +56,9 @@ class Welcome extends Application {
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function index() {
-        $this->load->view('welcome');
-        
-        /* Previous example code
-        // get the three most recent images from the images model
-        $pix = $this->images->newest();
-
-        // build an array of the formatted cells to hold each picture
-        foreach ($pix as $picture) {
-            $cells[] = $this->parser->parse('_cell', (array) $picture, true);
-        }
-        $this->load->library('table');
-        $parms = array(
-            'table_open' => '<table class="gallery">',
-            'cell_start' => '<td class="oneimage">',
-            'cell_alt_start' => '<td class="oneimage">');
-        $this->table->set_template($parms);
-
-        // now we generate the table
-        $rows = $this->table->make_columns($cells, 3);
-        $this->data['thetable'] = $this->table->generate($rows);
+        $this->data['products']="My product list goes here";
         $this->data['pagebody'] = 'welcome';
-        $this->render();
-         * 
-         */
+        $this->render();        
     }
 
 }
