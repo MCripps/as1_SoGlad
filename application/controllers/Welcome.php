@@ -56,7 +56,16 @@ class Welcome extends Application {
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function index() {
-        $this->data['products']="My product list goes here";
+        // get the product images from the products model, which has been autoloaded (see config/autoload.php)
+        $productList = $this->products->all();
+        
+        // build an array of the fromatted cells to hold each picture
+        foreach ($productList as $product)
+        {
+            $productHTML[] = $this->parser->parse('_product', (array)$product, true);
+        }
+
+        $this->data['products']=implode($productHTML);
         $this->data['pagebody'] = 'welcome';
         $this->render();        
     }
