@@ -1,0 +1,212 @@
+/******************************************************************************
+ * Title : style.css
+ * Author: Marcus Cripps
+ * Date  : 06/10/2013
+ *
+ * Description:
+ * Provides the main styles for the SoGlad.co.uk website
+ * 
+ * Copyright Bizpoint Solutions Ltd
+ ******************************************************************************/
+
+/* load the browser style reset stylesheet */
+@import "reset.css";
+
+HTML
+{
+	background-image: url(../images/wallpaper13.jpg);
+	background-color: #2F2A2A;
+	border: 5px solid rgb(0, 0, 0);
+/*
+	font-family: 'Butterfly Kids', cursive;
+*/
+	font-family: 'Emilys Candy', cursive;
+	font-size: 18px;
+}
+
+BODY
+{
+	padding: 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #739494;
+	min-width: 580px;
+	max-width: 960px;
+	width: auto;
+	/*[disabled]float:left;*/
+}
+
+.mainArea {
+	margin-left: 200px;
+}
+
+.sidebar {
+	float: left;
+	width: 190px;
+	display: block;
+}
+
+.email
+{
+	text-align: right;
+	font-family: "Special Elite";
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.productNav
+{
+	background-color: #FEFDCA;
+}
+
+.productNav h2
+{
+	font-size: 20px;
+	margin: 10px;
+}
+.productNav a {
+	background-color: #FEFDCF;
+	font-size: 12px;
+	font-family: "Special Elite";
+	width: 100px;
+	margin: 10px;
+	text-decoration: none;
+}
+
+.news
+{
+	font-size: 16px;
+	margin: 20px 5px 10px 5px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgb(220,220,250);
+}
+
+.products{
+	min-width: 400px;
+}
+
+div .product {
+float: left;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid gray;
+}
+
+.product a{
+	font-size: 18px;
+	color: white;
+}
+
+.productIntro h1
+{
+	font-size: 30px;
+	font-style: bold;
+	color: white;
+	padding:10px;
+	margin-top:15px;
+	
+}
+.productInfo
+{
+	padding: 5px 5px 10px 10px;
+	margin: 10px;
+	font-family: "Special Elite";
+	font-size: 12px;
+	box-shadow: 3px 3px 9px rgb(80,80,80);
+	background-color: #FEFDCF;
+	color: rgb(50,50,50);
+	width: 345px;
+	clear: both;
+}
+
+.productPhotos img
+{
+	float: left;
+	width: 170px;
+	height: 230px;
+	margin: 10px;
+}
+
+.productPhotos2 img
+{
+	float: left;
+	width: 360px;
+	margin: 10px;
+}
+
+.footer 
+{
+	clear: both;
+	text-align: right;
+	background-color: #000000;
+	color: white;
+	font-size: 10px;
+	padding: 10px;
+	margin: -15px;
+	font-family: "Verdana";
+	font-style: italic;
+}
+
+.banner
+{
+	background-image: url(../images/wallpaper11.jpg);
+	font-family: "Special Elite";
+	font-size: 20px;
+	height: 259px;
+	min-width: 580px;
+	margin-bottom: 30px;
+}
+
+.header
+{
+	position: center;
+}
+
+.strapline
+{
+	position: absolute;
+	top: 260px;
+	left: 160px;
+	width: 450px;
+	color: white;
+	text-align: center;
+	background-color: rgba(50,50,50, 0.35);
+	font-size: 16px;
+}
+.logo
+{
+	position: absolute;
+	top: 60px;
+	left: 240px;
+	width: 380px;
+	text-align: center;
+	color: white;
+	background-color: rgba(30,30,30, 0.5);
+	font-size:80px;
+}
+
+article time
+ {
+	display: block;
+	font-style: italic;
+	font-size: 12px;
+	text-align: right;
+	margin: 10px;
+}
+
+article h2
+{
+   font-size: 16px;
+	color: maroon;
+}
+
+.price
+ {
+	display: block;
+	font-style: italic;
+	text-align: right;
+	margin: 5px;
+	color: blue;
+}

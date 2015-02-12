@@ -17,6 +17,11 @@ class Application extends CI_Controller {
      */
     function __construct()
     {
+        /* _template.php parameters defined
+         * pageTitle = the title of type page e.g. SoGlad
+         * companySummary = summary of what the company makes and sells
+         * 
+         */
 	parent::__construct();
 	$this->data = array();
         $this->choices = array(// our menu navbar

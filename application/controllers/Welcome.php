@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeIgniter
  *
@@ -44,9 +45,9 @@ class Welcome extends Application {
      *
      * Maps to the following URL
      * 		http://example.com/index.php/welcome
-     *	- or -
+     * 	- or -
      * 		http://example.com/index.php/welcome/index
-     *	- or -
+     * 	- or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
@@ -54,15 +55,16 @@ class Welcome extends Application {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
-    public function index(){
-            // get the three most recent images from the images model
-        $pix = $this->images->newest();
+    public function index() {
+        $this->load->view('welcome');
         
+        /* Previous example code
+        // get the three most recent images from the images model
+        $pix = $this->images->newest();
+
         // build an array of the formatted cells to hold each picture
-        foreach ($pix as $picture)
-        {
-            $cells[] = $this->parser->parse('_cell', (array)$picture, true);
-            
+        foreach ($pix as $picture) {
+            $cells[] = $this->parser->parse('_cell', (array) $picture, true);
         }
         $this->load->library('table');
         $parms = array(
@@ -70,13 +72,16 @@ class Welcome extends Application {
             'cell_start' => '<td class="oneimage">',
             'cell_alt_start' => '<td class="oneimage">');
         $this->table->set_template($parms);
-        
+
         // now we generate the table
-        $rows = $this->table->make_columns($cells,3);
-        $this->data['thetable']= $this->table->generate($rows);
+        $rows = $this->table->make_columns($cells, 3);
+        $this->data['thetable'] = $this->table->generate($rows);
         $this->data['pagebody'] = 'welcome';
         $this->render();
+         * 
+         */
     }
+
 }
 
 /* End of file welcome.php */
