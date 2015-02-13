@@ -73,8 +73,10 @@ class Welcome extends Application {
         // now get the news stories from the content table
         $newsList = $this->content->getNews();
     
-        // build an array of the product html
+        // build an array of the news html
         foreach ($newsList as $newsItem){
+            // REFACTOR! - Is this really the best way to format a date?
+            $newsItem['last_modified']= date("jS M Y", strtotime($newsItem['last_modified']));
             $newsHTML[] = $this->parser->parse('_news', (array)$newsItem, true);
         }
 
