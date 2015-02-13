@@ -19,7 +19,7 @@ class Content extends CI_Model{
     }
     
     function getNews() {
-        $this->db->where('content_typeId',$this->contentTypes['news'] );
+        $this->db->where('content_typeId',2 ); // bad I know but will refactor
         $query = $this->db->get('site_content');
         return $query->result_array();                
     }

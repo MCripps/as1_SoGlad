@@ -12,7 +12,7 @@ class Products extends CI_Model{
     
     // return all of the images, descending order by the date posted
     function all(){
-        $this->db->order_by("id", "desc");
+        $this->db->order_by("id", "asc");
         $query = $this->db->get('products');
         return $query->result_array();
     }

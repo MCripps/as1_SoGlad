@@ -23,9 +23,10 @@
     <header>
         <a name={id}>{name}</a>
     </header>
-    <div class="productPhotos">
-        <img src="images/trianglePendant1.jpg" /> 
-        <img src="images/trianglePendant2.jpg" />
+    <div class="productPhotos{photo_count}">
+        {product_photos}
+        <img src="images/{path}" alt="{label}"/> 
+        {/product_photos}
     </div>
     <div class="productInfo">
         <p>{description}</p>

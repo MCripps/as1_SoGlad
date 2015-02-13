@@ -59,13 +59,28 @@ class Welcome extends Application {
         // get the product images from the products model, which has been autoloaded (see config/autoload.php)
         $productList = $this->products->all();
         
-        // build an array of the fromatted cells to hold each picture
-        foreach ($productList as $product)
-        {
+        // build an array of the product html
+        foreach ($productList as $product){
+            // we also want the photos for this product. so get these too and
+            // add them to our array before we perform the template substitution
+            $product['product_photos']=  $this->products->getProductImages($product['id']);
             $productHTML[] = $this->parser->parse('_product', (array)$product, true);
         }
 
+        // then convert the array into a single string using implode()
         $this->data['products']=implode($productHTML);
+        
+        // now get the news stories from the content table
+        $newsList = $this->content->getNews();
+    
+        // build an array of the product html
+        foreach ($newsList as $newsItem){
+            $newsHTML[] = $this->parser->parse('_news', (array)$newsItem, true);
+        }
+
+        // then convert the array into a single string using implode()
+        $this->data['news']=implode($newsHTML);
+
         $this->data['pagebody'] = 'welcome';
         $this->render();        
     }
